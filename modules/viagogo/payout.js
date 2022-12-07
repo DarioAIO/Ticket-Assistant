@@ -41,7 +41,7 @@ function insert_payout(ticket_ammount) {
 
      prices.forEach(element => {
           var total = parseInt(element.textContent.trim().replace("£", "").replace(",", ""))
-          var new_total = Math.round(Math.round(total * 0.8182) * 0.88) + 10
+          var new_total = Math.round(Math.round(total * 0.8182) * 0.88)
           element.appendChild(createElement("br"))
           element.appendChild(createElement("p1", `Payout: £${new_total}`))
 
