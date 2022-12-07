@@ -1,0 +1,44 @@
+{
+     "manifest_version": 3,
+     "name": "Ticket Assistant",
+     "version": "0.1",
+     "icons": {
+          "16": "./static/assets/via_logo.png",
+          "32": "./static/assets/via_logo.png",
+          "48": "./static/assets/via_logo.png",
+          "128": "./static/assets/via_logo.png"
+     },
+     "content_scripts": [
+          {
+               "matches": ["*://*/*"],
+               "include_globs": [
+                    "*://www.viagogo.*/*/*/*/*"
+               ],
+               "js": ["modules/viagogo/payout.js"],
+               "all_frames": true
+          }
+     ],
+     "background": {
+          "service_worker": "./background.js"
+     },
+     "action": {
+          "default_title": "Ticket Assistant",
+          "default_popup": "./static/popup.html",
+          "default_icon": {
+               "16": "./static/assets/via_logo.png",
+               "32": "./static/assets/via_logo.png",
+               "48": "./static/assets/via_logo.png",
+               "128": "./static/assets/via_logo.png"
+          }
+     },
+     "permissions": [
+          "tabs",
+          "activeTab",
+          "cookies",
+          "storage",
+          "notifications",
+          "webNavigation",
+          "http://*/*",
+          "https://*/*"
+     ]
+}

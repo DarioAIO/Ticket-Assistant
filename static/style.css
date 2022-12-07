@@ -1,0 +1,28 @@
+@font-face {
+     font-family: Inter-Regular;
+     src: url(./fonts/Inter-Regular.ttf)
+}
+
+body{
+     background-color: #181818;
+}
+
+div {
+     color: #ffffff;
+     width: 150px;
+     height: 55px;
+     text-align: center; 
+     font-family: Inter-Regular;
+}
+
+button {
+     color: #ffffff;
+     width: 130px;
+     height: 30px;
+     border-radius: 10px;
+     padding: 0;
+     border: 0;
+     background-color: #433F3F; 
+     cursor: pointer;
+     margin-top: 5px;
+}
