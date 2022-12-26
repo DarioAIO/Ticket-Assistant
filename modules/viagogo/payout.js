@@ -44,7 +44,7 @@ function insert_payout(ticket_ammount) {
           var currency = currency.charAt(0);
           console.log(currency)
           var total = parseInt(element.textContent.trim().replace(currency, "").replace(",", ""))
-          var new_total = Math.round(Math.round(total * 0.8182) * 0.88) + 10
+          var new_total = Math.round(Math.round(total * 0.8182) * 0.88)
           element.appendChild(createElement("br"))
           element.appendChild(createElement("p1", `Payout: ${currency}${new_total}`))
 
